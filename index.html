@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Felvillanyozódás</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+
+<div id="palyavalaszto" class="container mt-5">
+    <h1>Pályaválasztó</h1>
+    <p><strong>Játék leírása:</strong> <br> Nekeresdországban Nevenincs királynak egyik szeme sír, a másik nevet. Nevet,
+        mert végre elkészült a
+        hatalmas kacsalábon forgó palotája, sok-sok tágas szobával és folyosóval. Ugyanakkor sír is, mert ezeket a
+        helyiségeket be kell világítani és melegen kell tartani, azonban az aktuális rezsiemelkedés őt is érinti. Itt az
+        ideje tehát elgondolkodni, hogy pontosan hová is helyezzünk el villanykörtéket, hogy minden megfelelően be
+        legyen
+        világítva; ugyanakkor csak oda helyezzünk el izzót, ahol ténylegesen szükség is van rá.</p>
+
+    <ul>
+        <li>A királynak négyzet alapú szobái vannak, amelyek fekete és fehér cellákból állnak.</li>
+        <li>A fehér cellákba villanykörtéket lehet elhelyezni.</li>
+        <li>A villanykörtékből a fény átlósan nem terjed, csak az adott sor és oszlop mentén.</li>
+        <li>A fekete cellákon valamilyen tereptárgy van, ami akadályozza a fény terjedését.</li>
+        <li>A fekete cellák opcionálisan egy egész számot is tartalmazhatnak 0-tól 4-ig. Ez azt jelzi, hogy hány
+            szomszédos
+            (alul, felül, jobbra, balra) cella tartalmaz villanykörtét. Ha van ilyen szám, akkor be kell tartani!
+        </li>
+        <li>Két villanykörte soha nem világíthatja meg egymást!</li>
+        <li>A játék célja a villanykörtéket úgy elhelyezni, hogy minden fehér cellát megvilágítsanak.</li>
+        <li>A játékot egy játékos játssza, amíg meg nem oldja a rejtvényt, tehát több játékos egyidejű kezeléséről vagy
+            körökre osztásról nem kell gondoskodni.
+        </li>
+    </ul>
+    <hr>
+    <h2>Give your name: </h2>
+    <input type="text" id="playerName" value="Player 1" style="font-size: medium">
+    <h2 class="mt-2"> Then choose Difficulty! </h2>
+    <div id="palyavalaszto-btn-group" class="btn-group">
+        <button id="easy" value=7 class="btn btn-secondary">Easy (7x7)</button>
+        <button id="medium" value=7 class="btn btn-secondary">Medium (7x7)</button>
+        <button id="extreme" value=10 class="btn btn-secondary">Extreme(10x10)</button>
+    </div>
+
+</div>
+
+<div id="jatekter" class="container mt-4" hidden>
+    <div id="etc" class="container mb-4">
+        <span> <strong>Player name: </strong> <span id="player"></span></span>
+        <br>
+        <span><strong>Time elapsed: </strong><span id="timer"></span></span>
+        <br>
+        <span><strong>Difficulty: </strong><span id="diffi"></span></span>
+    </div>
+
+    <div id="game" class="container mh-40 w-50"></div>
+
+    <div class="btn-group mt-4">
+        <button id="checkGame" type="submit" class="btn btn-secondary">Check game</button>
+        <button id="newGame" type="submit" class="btn btn-secondary">New game</button>
+        <button id="saveGame" type="submit" class="btn btn-secondary">Save game</button>
+        <button id="backto" type="submit" class="btn btn-secondary">Home page</button>
+    </div>
+    <br>
+    <span id="solution" class="mt-3" style="font-size: large" hidden>Bad solution</span>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
